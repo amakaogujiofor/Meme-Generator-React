@@ -1,5 +1,6 @@
 * {
   font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
 }
 
 /* Header Styling */
@@ -29,4 +30,38 @@
 .header-text {
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+/* Form Styling */
+
+section {
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.form-btn {
+  grid-column: 1 / -1;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: #fff;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-input {
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid#a626d3;
+  border-radius: 5px;
+  text-indent: 0.5em;
+}
+
+.gen-img {
+  width: 20px;
 }
