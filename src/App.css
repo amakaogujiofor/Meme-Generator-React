@@ -66,8 +66,15 @@ section {
   width: 20px;
 }
 
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .meme-img {
-  width: 350px;
-  /* margin: 0 auto; */
+  margin-top: 1em;
+  /* width: 90%; */
   border-radius: 15px;
+  max-width: 100%;
 }

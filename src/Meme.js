@@ -1,21 +1,37 @@
 import React from "react";
 import MemesData from "./MemesData.js";
 
-export default function randomImage() {
-  const memesArray = MemesData.data.memes;
-  const randomNumber = Math.floor(Math.random() * memesArray.length);
-  const url = memesArray[randomNumber].url;
+export default function RandomImage() {
+  const [memeImage, setMemeImage] = React.useState();
+
+  function getMemeImage() {
+    const memesArray = MemesData.data.memes;
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
+    setMemeImage(memesArray[randomNumber].url);
+  }
+  //   getMemeImage();
+  //   const url = memesArray[randomNumber].url;
 
   return (
     <section>
       <div className="form">
-        <input type="text" placeholder="Test" className="form-input"></input>
-        <input type="text" placeholder="Test" className="form-input"></input>
-        <button className="form-btn" onClick={randomImage}>
+        <input
+          type="text"
+          placeholder="add your text"
+          className="form-input"
+        ></input>
+        <input
+          type="text"
+          placeholder="add your text"
+          className="form-input"
+        ></input>
+        <button className="form-btn" onClick={getMemeImage}>
           {" "}
-          Get a new meme image 🖼{" "}
+          Click to create yours 🖼{" "}
         </button>
-        <img src={url} alt="random" className="meme-img" />
+      </div>
+      <div className="img-container">
+        <img src={memeImage} className="meme-img" />
       </div>
     </section>
   );

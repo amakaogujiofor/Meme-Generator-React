@@ -8,7 +8,7 @@ export default function Header() {
         alt="smile-emoji"
         className="header-image"
       />
-      <h2 className="header-title">Meme Generator</h2>
+      <h2 className="header-title">InspireMe Gen </h2>
       <h3 className="header-text">React Course - Project 3</h3>
     </header>
   );
